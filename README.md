@@ -1,40 +1,38 @@
 # Echolocate
 
-A desktop network discovery and topology visualizer.
+[![Rust](https://img.shields.io/badge/Rust-%23dea584?style=flat-square&logo=rust)](#) [![Status](https://img.shields.io/badge/status-WIP-yellow?style=flat-square)](#)
 
-Stack: Tauri 2 (Rust backend), SvelteKit (Svelte 5 frontend), SQLite.
+> Desktop network discovery and topology visualizer.
 
-## Getting Started
+Echolocate scans your local network, discovers connected devices, and maps the topology. Built with a Rust backend for native packet access and a SvelteKit frontend for the visual layer.
 
-### Prerequisites
+## Features
 
-- [Rust](https://rustup.rs/) (stable)
-- [Node.js](https://nodejs.org/) 18+
-- Linux (for local Rust/Tauri test builds): `glib-2.0` development package installed (provides `glib-2.0.pc`)
-- macOS (network scanning currently uses macOS-specific commands: `arp`, `ifconfig`, `netstat`, `ping`, `host`)
+- **Live discovery** — ARP and ping sweeps across local subnets
+- **Port scanning** — Top 100 common ports per host
+- **Topology view** — Visual map of discovered devices and their relationships
+- **PCAP export** — Save session captures for offline analysis
+- **Local storage** — All scan history persisted in SQLite, nothing leaves the machine
 
-### Development
+## Quick Start
 
 ```bash
-# Install frontend dependencies
+git clone https://github.com/saagpatel/Echolocate.git
+cd Echolocate
 npm install
-
-# Run in development mode (starts both Vite dev server and Tauri)
 npm run tauri dev
-
-# Run frontend checks
-npm run check
-
-# Build for production
-npm run tauri build
 ```
 
-## Known Limitations
+## Tech Stack
 
-- **macOS only** — Network commands are currently platform-specific
-- **No IPv6** — Discovery and scanning are currently IPv4 only
-- **Top 100 ports only** (not yet parameterized) — Placeholder for port range selection
-- **No custom alert rules** — Rules are hardcoded, UI allows enable/disable only
+| Layer | Technology |
+|-------|------------|
+| Desktop shell | Tauri 2 |
+| Backend | Rust (network scanning, socket access) |
+| Frontend | SvelteKit (Svelte 5) |
+| Storage | SQLite |
+
+> **Status: Work in Progress** — Core discovery and port scanning are functional on macOS. IPv6, custom alert rules, and cross-platform support are not yet implemented.
 
 ## License
 
