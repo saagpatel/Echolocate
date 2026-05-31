@@ -11,7 +11,7 @@ Echolocate scans your local network, discovers connected devices, and maps the t
 - **Live discovery** — ARP and ping sweeps across local subnets
 - **Port scanning** — Top 100 common ports per host
 - **Topology view** — Visual map of discovered devices and their relationships
-- **PCAP export** — Save session captures for offline analysis
+- **Session export** — Save and restore device and alert data as JSON
 - **Local storage** — All scan history persisted in SQLite, nothing leaves the machine
 
 ## Quick Start

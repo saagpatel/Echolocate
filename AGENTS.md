@@ -3,7 +3,7 @@
 
 ## What This Project Is
 
-Echolocate is a Tauri desktop network-discovery and topology visualizer. A Rust backend performs local network scanning, ping/ARP discovery, port checks, and PCAP export while a SvelteKit frontend maps discovered devices and relationships.
+Echolocate is a Tauri desktop network-discovery and topology visualizer. A Rust backend performs local network scanning, ping/ARP discovery, port checks, and JSON session export while a SvelteKit frontend maps discovered devices and relationships.
 
 ## Current State
 
