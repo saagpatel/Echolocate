@@ -15,3 +15,5 @@ src-tauri/target/
 Thumbs.db
 *.log
 src-tauri/WixTools/
+artifacts/
+test-results/
