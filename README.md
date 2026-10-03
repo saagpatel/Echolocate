@@ -4,19 +4,19 @@
 
 > Desktop network discovery and topology visualizer.
 
-Echolocate scans your local network, discovers connected devices, and maps the topology. Built with a Rust backend for native packet access and a SvelteKit frontend for the visual layer.
+Echolocate scans your local network, discovers connected devices, and maps the topology. Built with a Rust backend using system network tools and TCP sockets and a SvelteKit frontend for the visual layer.
 
 ## Features
 
-- **Live discovery** — ARP and ping sweeps across local subnets
+- **Live discovery** — Read the system ARP/neighbor table and ping discovered hosts
 - **Port scanning** — Top 100 common ports per host
-- **Topology view** — Visual map of discovered devices and their relationships
-- **Session export** — Save and restore device and alert data as JSON
-- **Local storage** — All scan history persisted in SQLite, nothing leaves the machine
+- **Topology view** — Visual map linking discovered devices to the gateway
+- **Session export** — Export devices and alerts as JSON; import basic device records only
+- **Local storage** — Scan history persisted in local SQLite; scans and hostname lookups generate network traffic
 
 ## Quick Start
 
-Use Node.js 22.12+ with npm, Rust/Cargo, and the platform's Tauri 2 native build
+Use Node.js 22.x (22.12+) or 24+ with npm, Rust/Cargo, and the platform's Tauri 2 native build
 prerequisites (Xcode Command Line Tools on macOS; platform libraries are also
 required on Linux/Windows). Run the following commands from the repository root.
 
@@ -66,7 +66,7 @@ and generated `src-tauri/gen` outputs. No automated visual suite is configured.
 | Frontend | SvelteKit (Svelte 5) |
 | Storage | SQLite |
 
-> **Status: Work in Progress** — Core discovery and port scanning are functional on macOS. IPv6, custom alert rules, and cross-platform support are not yet implemented.
+> **Status: Work in Progress** — Core discovery and port scanning are functional on macOS. IPv6 discovery and creation of custom alert rules are not yet implemented; Linux/Windows interface and ARP discovery code is present.
 
 ## License
 
