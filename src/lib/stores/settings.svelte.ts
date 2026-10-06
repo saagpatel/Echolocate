@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import type { NetworkInterface, AppSettings } from '$lib/types/network';
+import type { NetworkInterface, AppSettings } from '#lib/types/network.ts';
 
 /** Available network interfaces */
 export const interfaces = writable<NetworkInterface[]>([]);

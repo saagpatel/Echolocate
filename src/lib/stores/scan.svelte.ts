@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import type { ScanProgress, ScanSummary } from '$lib/types/scan';
+import type { ScanProgress, ScanSummary } from '#lib/types/scan.ts';
 
 /** Whether a scan is currently running */
 export const isScanning = writable<boolean>(false);

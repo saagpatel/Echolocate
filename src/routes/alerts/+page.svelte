@@ -1,10 +1,10 @@
 <script lang="ts">
-	import AlertItem from '$lib/components/alerts/AlertItem.svelte';
-	import { alerts, unreadCount, markAllRead } from '$lib/stores/alerts.svelte';
-	import { markAllAlertsRead } from '$lib/services/tauri-bridge';
-	import { selectedDeviceId } from '$lib/stores/devices.svelte';
+	import AlertItem from '#lib/components/alerts/AlertItem.svelte';
+	import { alerts, unreadCount, markAllRead } from '#lib/stores/alerts.svelte.ts';
+	import { markAllAlertsRead } from '#lib/services/tauri-bridge.ts';
+	import { selectedDeviceId } from '#lib/stores/devices.svelte.ts';
 	import { goto } from '$app/navigation';
-	import type { AlertEventType } from '$lib/types/alert';
+	import type { AlertEventType } from '#lib/types/alert.ts';
 
 	let filter: AlertEventType | 'all' = $state('all');
 

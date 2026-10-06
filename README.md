@@ -16,7 +16,7 @@ Echolocate scans your local network, discovers connected devices, and maps the t
 
 ## Quick Start
 
-Use Node.js 22.x (22.12+) or 24+ with npm, Rust/Cargo, and the platform's Tauri 2 native build
+Use Node.js 22.17+ or 24+ with npm, Rust/Cargo, and the platform's Tauri 2 native build
 prerequisites (Xcode Command Line Tools on macOS; platform libraries are also
 required on Linux/Windows). Run the following commands from the repository root.
 

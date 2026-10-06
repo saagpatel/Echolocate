@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { settings, interfaces, setSettings } from '$lib/stores/settings.svelte';
-	import { updateSettings, exportDevices, importDevices } from '$lib/services/tauri-bridge';
+	import { settings, interfaces, setSettings } from '#lib/stores/settings.svelte.ts';
+	import { updateSettings, exportDevices, importDevices } from '#lib/services/tauri-bridge.ts';
 
 	let localSettings = $derived({ ...$settings });
 	let saving = $state(false);

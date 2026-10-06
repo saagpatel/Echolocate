@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Alert } from '$lib/types/alert';
-	import { markAlertRead } from '$lib/services/tauri-bridge';
-	import { markRead } from '$lib/stores/alerts.svelte';
+	import type { Alert } from '#lib/types/alert.ts';
+	import { markAlertRead } from '#lib/services/tauri-bridge.ts';
+	import { markRead } from '#lib/stores/alerts.svelte.ts';
 
 	let { alert, onDeviceClick }: { alert: Alert; onDeviceClick?: (id: string) => void } = $props();
 

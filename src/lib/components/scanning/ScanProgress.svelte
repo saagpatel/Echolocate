@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ScanProgress as ScanProgressType } from '$lib/types/scan';
+	import type { ScanProgress as ScanProgressType } from '#lib/types/scan.ts';
 
 	let { progress }: { progress: ScanProgressType } = $props();
 

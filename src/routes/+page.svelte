@@ -1,11 +1,11 @@
 <script lang="ts">
-	import TopologyGraph from '$lib/components/topology/TopologyGraph.svelte';
-	import GraphControls from '$lib/components/topology/GraphControls.svelte';
-	import ScanControls from '$lib/components/scanning/ScanControls.svelte';
-	import ScanProgress from '$lib/components/scanning/ScanProgress.svelte';
-	import DeviceDetail from '$lib/components/devices/DeviceDetail.svelte';
-	import { devices, selectedDeviceId, selectedDevice } from '$lib/stores/devices.svelte';
-	import { isScanning, scanProgress } from '$lib/stores/scan.svelte';
+	import TopologyGraph from '#lib/components/topology/TopologyGraph.svelte';
+	import GraphControls from '#lib/components/topology/GraphControls.svelte';
+	import ScanControls from '#lib/components/scanning/ScanControls.svelte';
+	import ScanProgress from '#lib/components/scanning/ScanProgress.svelte';
+	import DeviceDetail from '#lib/components/devices/DeviceDetail.svelte';
+	import { devices, selectedDeviceId, selectedDevice } from '#lib/stores/devices.svelte.ts';
+	import { isScanning, scanProgress } from '#lib/stores/scan.svelte.ts';
 
 	let graphComponent: TopologyGraph | undefined = $state();
 </script>
@@ -45,7 +45,7 @@
 				bind:this={graphComponent}
 				devices={$devices}
 				selectedId={$selectedDeviceId}
-				onSelectDevice={(id) => selectedDeviceId.set(id)}
+				onSelectDevice={(id: string | null) => selectedDeviceId.set(id)}
 			/>
 		{/if}
 	</div>

@@ -3,9 +3,9 @@
  * This is the ONLY file that calls listen().
  */
 import { listen, type UnlistenFn } from '@tauri-apps/api/event';
-import type { Device } from '$lib/types/device';
-import type { ScanProgress, ScanResult } from '$lib/types/scan';
-import type { Alert } from '$lib/types/alert';
+import type { Device } from '#lib/types/device.ts';
+import type { ScanProgress, ScanResult } from '#lib/types/scan.ts';
+import type { Alert } from '#lib/types/alert.ts';
 
 export interface EventHandlers {
 	onScanProgress: (progress: ScanProgress) => void;

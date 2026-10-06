@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import type { Device } from '$lib/types/device';
+import type { Device } from '#lib/types/device.ts';
 
 /** All known devices, keyed by ID */
 const deviceMap = writable<Map<string, Device>>(new Map());
