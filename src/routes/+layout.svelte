@@ -1,23 +1,23 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import '../app.css';
-	import { getDevices, getAlerts, getSettings, getInterfaces, startScan } from '$lib/services/tauri-bridge';
-	import { subscribeAll, unsubscribeAll } from '$lib/services/tauri-events';
-	import { setDevices, upsertDevice, markDeparted, devices, onlineCount } from '$lib/stores/devices.svelte';
-	import { updateProgress, completeScan, updateMonitorStatus, isScanning } from '$lib/stores/scan.svelte';
-	import { selectedDeviceId } from '$lib/stores/devices.svelte';
-	import { setAlerts, addAlert, unreadCount } from '$lib/stores/alerts.svelte';
-	import { setSettings, setInterfaces } from '$lib/stores/settings.svelte';
-	import { errorStore, type AppError } from '$lib/stores/error.svelte';
-	import Toast from '$lib/components/ui/Toast.svelte';
+	import { getDevices, getAlerts, getSettings, getInterfaces, startScan } from '#lib/services/tauri-bridge.ts';
+	import { subscribeAll, unsubscribeAll } from '#lib/services/tauri-events.ts';
+	import { setDevices, upsertDevice, markDeparted, devices, onlineCount } from '#lib/stores/devices.svelte.ts';
+	import { updateProgress, completeScan, updateMonitorStatus, isScanning } from '#lib/stores/scan.svelte.ts';
+	import { selectedDeviceId } from '#lib/stores/devices.svelte.ts';
+	import { setAlerts, addAlert, unreadCount } from '#lib/stores/alerts.svelte.ts';
+	import { setSettings, setInterfaces } from '#lib/stores/settings.svelte.ts';
+	import { errorStore, type AppError } from '#lib/stores/error.svelte.ts';
+	import Toast from '#lib/components/ui/Toast.svelte';
 	import type { UnlistenFn } from '@tauri-apps/api/event';
 	import type { Snippet } from 'svelte';
 
 	let { children }: { children: Snippet } = $props();
 
 	let unlisteners: UnlistenFn[] = [];
-	let currentPath = $derived($page.url.pathname);
+	let currentPath = $derived(page.url.pathname);
 
 	const navItems = [
 		{ path: '/', label: 'Topology', icon: '◎' },

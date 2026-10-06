@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { startScan, startMonitor, stopMonitor } from '$lib/services/tauri-bridge';
-	import { isScanning, monitoringActive } from '$lib/stores/scan.svelte';
-	import { activeInterface, settings } from '$lib/stores/settings.svelte';
+	import { startScan, startMonitor, stopMonitor } from '#lib/services/tauri-bridge.ts';
+	import { isScanning, monitoringActive } from '#lib/stores/scan.svelte.ts';
+	import { activeInterface, settings } from '#lib/stores/settings.svelte.ts';
 	import InterfaceSelector from './InterfaceSelector.svelte';
 
 	let scanning = $derived($isScanning);

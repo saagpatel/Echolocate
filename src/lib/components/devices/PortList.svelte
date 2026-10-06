@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PortInfo } from '$lib/types/device';
+	import type { PortInfo } from '#lib/types/device.ts';
 
 	let { ports }: { ports: PortInfo[] } = $props();
 </script>

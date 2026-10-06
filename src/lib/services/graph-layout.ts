@@ -9,7 +9,7 @@ import {
 	type SimulationNodeDatum,
 	type SimulationLinkDatum
 } from 'd3-force';
-import type { Device } from '$lib/types/device';
+import type { Device } from '#lib/types/device.ts';
 
 export interface GraphNode extends SimulationNodeDatum {
 	id: string;

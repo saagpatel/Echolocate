@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { interfaces, settings, activeInterface } from '$lib/stores/settings.svelte';
-	import { updateSettings } from '$lib/services/tauri-bridge';
+	import { interfaces, settings, activeInterface } from '#lib/stores/settings.svelte.ts';
+	import { updateSettings } from '#lib/services/tauri-bridge.ts';
 
 	let active = $derived($activeInterface);
 

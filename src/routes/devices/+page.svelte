@@ -1,9 +1,9 @@
 <script lang="ts">
-	import DeviceList from '$lib/components/devices/DeviceList.svelte';
-	import DeviceDetail from '$lib/components/devices/DeviceDetail.svelte';
-	import ScanControls from '$lib/components/scanning/ScanControls.svelte';
-	import SearchBar from '$lib/components/ui/SearchBar.svelte';
-	import { devices, selectedDeviceId, selectedDevice } from '$lib/stores/devices.svelte';
+	import DeviceList from '#lib/components/devices/DeviceList.svelte';
+	import DeviceDetail from '#lib/components/devices/DeviceDetail.svelte';
+	import ScanControls from '#lib/components/scanning/ScanControls.svelte';
+	import SearchBar from '#lib/components/ui/SearchBar.svelte';
+	import { devices, selectedDeviceId, selectedDevice } from '#lib/stores/devices.svelte.ts';
 
 	let searchQuery = $state('');
 </script>
@@ -18,7 +18,7 @@
 				<SearchBar
 					value={searchQuery}
 					placeholder="Search devices..."
-					onInput={(v) => searchQuery = v}
+					onInput={(v: string) => searchQuery = v}
 				/>
 			</div>
 		</div>
@@ -34,7 +34,7 @@
 				<DeviceList
 					devices={$devices}
 					selectedId={$selectedDeviceId}
-					onSelectDevice={(id) => selectedDeviceId.set(id)}
+					onSelectDevice={(id: string) => selectedDeviceId.set(id)}
 					{searchQuery}
 				/>
 			</div>

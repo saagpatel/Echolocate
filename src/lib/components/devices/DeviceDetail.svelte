@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Device } from '$lib/types/device';
-	import { updateDevice, deleteDevice, pingDevice } from '$lib/services/tauri-bridge';
-	import { upsertDevice, removeDevice } from '$lib/stores/devices.svelte';
+	import type { Device } from '#lib/types/device.ts';
+	import { updateDevice, deleteDevice, pingDevice } from '#lib/services/tauri-bridge.ts';
+	import { upsertDevice, removeDevice } from '#lib/stores/devices.svelte.ts';
 	import PortList from './PortList.svelte';
 	import LatencyChart from './LatencyChart.svelte';
 	import StatusBadge from '../ui/StatusBadge.svelte';

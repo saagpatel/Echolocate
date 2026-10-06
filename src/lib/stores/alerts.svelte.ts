@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store';
-import type { Alert, AlertRule } from '$lib/types/alert';
+import type { Alert, AlertRule } from '#lib/types/alert.ts';
 
 /** All alerts */
 export const alerts = writable<Alert[]>([]);

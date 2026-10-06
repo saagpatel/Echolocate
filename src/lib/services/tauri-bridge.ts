@@ -3,10 +3,10 @@
  * This is the ONLY file that calls invoke().
  */
 import { invoke } from '@tauri-apps/api/core';
-import type { Device, DeviceUpdate } from '$lib/types/device';
-import type { ScanConfig, ScanResult, ScanSummary } from '$lib/types/scan';
-import type { Alert, AlertRule, AlertRuleUpdate } from '$lib/types/alert';
-import type { NetworkInterface, AppSettings, LatencyPoint, PingResult } from '$lib/types/network';
+import type { Device, DeviceUpdate } from '#lib/types/device.ts';
+import type { ScanConfig, ScanResult, ScanSummary } from '#lib/types/scan.ts';
+import type { Alert, AlertRule, AlertRuleUpdate } from '#lib/types/alert.ts';
+import type { NetworkInterface, AppSettings, LatencyPoint, PingResult } from '#lib/types/network.ts';
 
 // ── Scanning ──
 

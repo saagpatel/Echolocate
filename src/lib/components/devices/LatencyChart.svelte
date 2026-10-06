@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { LatencyPoint } from '$lib/types/network';
-  import { getLatencyHistory } from '$lib/services/tauri-bridge';
+  import type { LatencyPoint } from '#lib/types/network.ts';
+  import { getLatencyHistory } from '#lib/services/tauri-bridge.ts';
 
   let { deviceId }: { deviceId: string } = $props();
 

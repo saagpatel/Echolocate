@@ -9,11 +9,11 @@
 		getEdgeColor,
 		type GraphNode,
 		type GraphLink
-	} from '$lib/services/graph-layout';
-	import type { Device } from '$lib/types/device';
+	} from '#lib/services/graph-layout.ts';
+	import type { Device } from '#lib/types/device.ts';
 	import type { Simulation } from 'd3-force';
 	import GraphTooltip from './GraphTooltip.svelte';
-	import { settings } from '$lib/stores/settings.svelte';
+	import { settings } from '#lib/stores/settings.svelte.ts';
 
 	let {
 		devices,

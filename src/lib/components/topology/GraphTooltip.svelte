@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Device } from '$lib/types/device';
+	import type { Device } from '#lib/types/device.ts';
 
 	let { device, x, y }: { device: Device; x: number; y: number } = $props();
 
